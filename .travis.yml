@@ -5,6 +5,15 @@ compiler:
   - gcc
   - clang
 
+sudo: true
+
+install:
+  - sudo apt update -qq
+  # Boost
+  - sudo apt install -qq libboost-all-dev
+  # Qt5
+  - sudo apt install -qq qt5-default
+
 script:
   - mkdir build
   - cd build
